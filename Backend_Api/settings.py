@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1"]
-ADMIN_WHITELIST = ["127.0.0.1", "172.20.0.0/24"]
+ADMIN_WHITELIST = ["127.0.0.1"]
 PROTECTED_URLS = ["ProtectedUrlPathView"]
 # Application definition
 
@@ -70,6 +70,13 @@ SESSION_REDIS = {
     "prefix": "session",
     "socket_timeout": 1,
     "retry_on_timeout": False,
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ]
 }
 
 TEMPLATES = [

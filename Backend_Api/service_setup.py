@@ -19,6 +19,7 @@ class SubnetVarsSettings(BaseSettings):
     SUBNET_PREFIX: int
     WAIT_UNBAN_T: int
     TRACK_IP_T: int
+    TOTAL_REQUEST: int
 
     class Config:
         env_file = find_dotenv(filename="my_dotenv.env.dev")

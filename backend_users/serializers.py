@@ -81,7 +81,6 @@ class UnbanSubnetSerializer(serializers.Serializer):
     def validate(self, attrs):
         validators = [
             self.check_ip_banned,
-
         ]
 
         for validator in validators:
